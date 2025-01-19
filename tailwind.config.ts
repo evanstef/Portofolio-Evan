@@ -11,7 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondary: "#0f0f0f",
+        primary: "#0A0A0A",
+        variatif: "#171717",
+        variatif_secondary : "#161616",
       },
+      fontFamily: {
+
+      }
     },
   },
   plugins: [],

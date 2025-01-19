@@ -13,9 +13,101 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gsap_animation { 
+  position: relative;
+  z-index: auto;
+  box-sizing: border-box; 
+}
+
+.parralax-wrap {
+  position: relative;
+  z-index: 10;
+}
+
+/* efek */
+
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 1);
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+
+.shooting-star-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 120px;
+  z-index: -1;
+  background: linear-gradient(to bottom, white, transparent);
+  transform: rotate(-35deg);
+  animation: shoot 4s linear infinite, fade-in 0.5s ease-in-out;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-35deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, 200px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
