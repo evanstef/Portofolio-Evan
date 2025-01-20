@@ -210,7 +210,16 @@ export default function Home() {
         // Akhir Home Page
 
         // About PAge
-
+        gsap.from(".about-page", {
+          scrollTrigger: {
+            trigger: ".about-page",
+            start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
+            end: "top top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
+            scrub: true
+          },
+          borderRadius : "40% 40% 0 0",
+          duration : 1
+          })
 
         gsap.to(".about-title", {
           scrollTrigger: {
@@ -289,6 +298,16 @@ export default function Home() {
 
 
         // Project Page
+        gsap.from(".project-page", {
+          scrollTrigger: {
+            trigger: ".project-page",
+            start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
+            end: "top top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
+            scrub: true
+          },
+          borderRadius : "40% 40% 0 0",
+          duration : 1
+        })
         gsap.to(".project-title", {
           scrollTrigger: {
             trigger: ".contact-page",
@@ -316,6 +335,16 @@ export default function Home() {
 
 
         // Contact Page
+        gsap.from(".contact-page", {
+          scrollTrigger: {
+            trigger: ".contact-page",
+            start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
+            end: "top top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
+            scrub: true
+          },
+          borderRadius : "40% 40% 0 0",
+          duration : 1
+        })
         gsap.from(".text1-contact", {
           scrollTrigger: {
             trigger: ".contact-page",
