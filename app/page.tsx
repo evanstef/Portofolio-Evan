@@ -210,6 +210,8 @@ export default function Home() {
         // Akhir Home Page
 
         // About PAge
+
+
         gsap.to(".about-title", {
           scrollTrigger: {
             trigger: ".project-page",
@@ -295,6 +297,7 @@ export default function Home() {
             scrub: true
           },
           x : -200,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -306,6 +309,7 @@ export default function Home() {
             scrub: true
           },
           scale : 2,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
         // Akhir Project Page
