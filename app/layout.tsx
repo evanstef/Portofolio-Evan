@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.className} w-full`}>
+      <body className={`${geistSans.className} w-full text-white`}>
         <NavProvider>
           <LoadingScreenFirstOpen />
           <Navbar />
