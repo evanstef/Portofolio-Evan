@@ -114,6 +114,7 @@ export default function Home() {
             scrub: true
           },
           x : -100,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -126,6 +127,7 @@ export default function Home() {
             scrub: true
           },
           x : -200,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -138,6 +140,7 @@ export default function Home() {
             scrub: true
           },
           x : -300,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -150,6 +153,7 @@ export default function Home() {
             scrub: true
           },
           x : 250,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -162,6 +166,7 @@ export default function Home() {
             scrub: true
           },
           x : -400,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -174,6 +179,7 @@ export default function Home() {
             scrub: true
           },
           x : -500,
+          filter: "blur(7px)",
           ease: "power2.out",
           })
 
@@ -186,6 +192,7 @@ export default function Home() {
             scrub: true
           },
           x : -600,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -211,6 +218,7 @@ export default function Home() {
             scrub: true
           },
           x : -200,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -246,6 +254,7 @@ export default function Home() {
             scrub: true
           },
           x : -300,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -258,6 +267,7 @@ export default function Home() {
             scrub: true
           },
           x : 500,
+          filter: "blur(7px)",
           ease: "power2.out",
         })
 
@@ -269,6 +279,7 @@ export default function Home() {
             scrub: true,
           },
           x: (index) => 600 + index * 20, // Geser lebih jauh berdasarkan indeks elemen
+          filter: "blur(7px)",
           ease: "power2.out",
         });
 
@@ -309,6 +320,7 @@ export default function Home() {
             scrub: true
           },
           xPercent : -100,
+          filter: "blur(7px)",
         })
 
         gsap.from(".text2-contact", {
@@ -319,6 +331,7 @@ export default function Home() {
             scrub: true
           },
           xPercent : -200,
+          filter: "blur(7px)",
         })
 
         // form pesan 
@@ -330,6 +343,7 @@ export default function Home() {
             scrub: true
           },
           xPercent : 200,
+          filter: "blur(7px)",
           duration : 1
         })
 
@@ -342,6 +356,7 @@ export default function Home() {
             scrub: true
           },
           xPercent : -400,
+          filter: "blur(7px)",
           duration : 1
         })
 
