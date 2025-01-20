@@ -8,6 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        bounceHigh: {
+          "0%, 100%": {
+            transform: "translateY(-100%)", // Pantulan lebih tinggi
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)", // Kembali ke posisi awal
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -18,6 +30,9 @@ export default {
       },
       fontFamily: {
 
+      },
+      animation: {
+        "bounce-high": "bounceHigh 1s infinite", // Animasi custom
       }
     },
   },

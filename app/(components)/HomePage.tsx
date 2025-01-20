@@ -27,8 +27,7 @@ const HomePage = () => {
       .from(".text2 p", { scale : 0, duration : 0.1, stagger : 0.1 })
       .from(".text3 p", { scale : 0, duration : 0.1, stagger : 0.1 })
       .from(".languages", {scale : 0, opacity : 0, duration : 0.5 })
-      .from(".about-me", { scale : 0, duration : 0.1 })
-      .from(".contact-me", { scale : 0, duration : 0.1 })
+      .from(".scroll-down", { y : 100, opacity : 0, duration : 0.1 })
 
   }, {scope : containerHome})
 
@@ -81,9 +80,17 @@ const HomePage = () => {
                     }}
                   />
                 </div>
-                <div className='flex justify-center gap-5 items-center text-xs sm:text-sm  xl:text-base'>
-                  <button className='about-me rounded-full px-4 py-1 hover:text-white hover:bg-gray-900 border-2 bg-white text-black mt-6'>About Me</button>
-                  <button className='contact-me border-2 rounded-full px-4 py-1  hover:text-white mt-6'>Contact Me</button>
+                <div className='flex justify-center gap-5 items-center mt-4'>
+                  {/* <button className='about-me rounded-full px-4 py-1 hover:text-white hover:bg-gray-900 border-2 bg-white text-black mt-6'>About Me</button>
+                  <button className='contact-me border-2 rounded-full px-4 py-1  hover:text-white mt-6'>Contact Me</button> */}
+                  {/* scroll down logo */}
+                  <div className='flex flex-col items-center scroll-down'>
+                    <button className='relative flex items-center justify-center w-4 h-8 lg:w-6 lg:h-10 rounded-full border border-white'>
+                      <div className='absolute bottom-2 w-2 h-2 rounded-full bg-white animate-bounce-high'></div>
+                    </button>
+                    <p className='mt-2 font-normal text-[10px] sm:text-sm lg:text-xs'>Scroll Down</p>
+                  </div>
+                  
                 </div>
                 
               </div>

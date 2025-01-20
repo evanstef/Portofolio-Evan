@@ -170,8 +170,8 @@ export default function Home() {
           ease: "power2.out",
         })
 
-        // about me
-        gsap.to(".about-me", {
+        // scroll-down
+        gsap.to(".scroll-down", {
           scrollTrigger: {
             trigger: ".about-page",
             start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
@@ -182,19 +182,6 @@ export default function Home() {
           filter: "blur(7px)",
           ease: "power2.out",
           })
-
-        // contact me
-        gsap.to(".contact-me", {
-          scrollTrigger: {
-            trigger: ".about-page",
-            start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
-            end: "bottom top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
-            scrub: true
-          },
-          x : -600,
-          filter: "blur(7px)",
-          ease: "power2.out",
-        })
 
         // rotate the gear
         gsap.to(".gear", {
