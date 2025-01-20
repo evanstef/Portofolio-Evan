@@ -79,7 +79,7 @@ const AboutPage = () => {
           </div>
           
           {/* efek line */}
-          <div className="w-full h-1.5 line-efek bg-slate-800 relative overflow-hidden rounded-full">
+          <div className="w-full h-1.5 line-efek bg-secondary relative overflow-hidden rounded-lg">
             <div
               className="light"
               style={{
