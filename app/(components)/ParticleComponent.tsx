@@ -1,19 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { log } from "node:console";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 
 
-const ParticlesComponent = ({className, isActive = false }: {className? : string, isActive : boolean}) => {
+const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {className? : string, isActive : boolean, maxClicks? : number}) => {
 
 
   const [init, setInit] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -29,10 +32,21 @@ const ParticlesComponent = ({className, isActive = false }: {className? : string
     });
   }, []);
 
-  const particlesLoaded = (container : any) => {
-    console.log(container);
+  const handleParticleClick = () => {
+    if (clickCount < maxClicks) {
+      setClickCount((prev) => prev + 1);
+    } else {
+      console.log("Batas klik tercapai!");
+    }
   };
+  
+  const particlesLoaded = useCallback((container: any) => {
+    if (container && container.interactivity) {
+      container.interactivity.element.addEventListener("click", handleParticleClick);
+    }
+  }, [handleParticleClick]);
 
+  
 
   const options : any = useMemo(
     () => ({
@@ -46,7 +60,7 @@ const ParticlesComponent = ({className, isActive = false }: {className? : string
         events: {
           onClick: {
             enable: true,
-            mode: "push",
+            mode: ["repulse"],
           },
           onHover: {
             enable: true,
@@ -60,10 +74,13 @@ const ParticlesComponent = ({className, isActive = false }: {className? : string
           },
         },
         modes: {
-          push: {
-            quantity: 5,
-            distance: 500,
-            duration: 5,
+          attract: {
+            distance: 200, // Radius tarikan
+            duration: 0.4, // Durasi efek tarikan
+          },
+          repulse: {
+            distance: 300, // Radius dorongan
+            duration: 1, // Durasi efek dorongan
           },
           grab: {
             distance: 250,
@@ -95,7 +112,7 @@ const ParticlesComponent = ({className, isActive = false }: {className? : string
           density: {
             enable: true,
           },
-          value: 120,
+          value: 150,
         },
         opacity: {
           value: 1.0,
@@ -124,12 +141,29 @@ const ParticlesComponent = ({className, isActive = false }: {className? : string
       },
       detectRetina: true,
     }),
-    [],
+    [maxClicks, clickCount],
   );
+
+  const handleClick = () => {
+    if (clickCount < maxClicks) {
+      setClickCount((prev) => prev + 1);
+    } else {
+      console.log("Max clicks reached");
+    }
+  };
+  
 
   if (!isActive) return null;
 
-  return <Particles className={className} options={options} />; 
+  return (
+    <div onClick={handleClick}>
+      <Particles className={className} options={options} />
+    </div>
+
+
+  )
+  
+  
   
 };
 

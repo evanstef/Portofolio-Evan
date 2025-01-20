@@ -35,8 +35,8 @@ const ContactPage = () => {
           
             <div className='text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold w-full md:w-1/2'>
                 {/* Tulisan Interest */}
-                <h1 className="bg-gradient-to-r from-variatif via-white to-variatif_secondary bg-clip-text text-transparent text1-contact">
-                  Interest To Use My Service
+                <h1 className="text-white text1-contact">
+                  Your Project, My Expertise
                 </h1>
                 <SplitText />
                 {/* Sosmed */}
