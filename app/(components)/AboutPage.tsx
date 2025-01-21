@@ -92,8 +92,8 @@ const AboutPage = () => {
             />
           </div>
 
-          <div className='desc-about text-base sm:text-lg md:text-xl lg:text-2xl'>
-            <p>This is my current skills graphically. I create a bunch of responsive design to express my creativity, especially in designing websites. I&apos;m still working on back end with JavaScript,PHP language and ExpressJS, NestJs, NodeJS, Laravel and etc. Beside coding, in my boredom i also play first person shooting games</p>
+          <div className='desc-about text-base sm:text-lg md:text-xl lg:text-[24px] font-extralight'>
+          <p>I’m excited to showcase my current skills in a more graphical and engaging way. My journey in web development has allowed me to create a variety of responsive and visually appealing designs that truly express my creativity, especially when it comes to crafting intuitive and modern websites. I constantly strive to push the boundaries of design while ensuring functionality and user experience remain at the forefront.On the back-end side, I am diving deeper into programming languages such as JavaScript and PHP, working extensively with frameworks and libraries like ExpressJS, NestJS, NodeJS, and Laravel. My focus lies in building scalable, efficient, and secure applications while continually improving my expertise in these technologies.Beyond coding, I have a passion for exploring new ideas, and during moments of leisure, you can often find me indulging in first-person shooting games. Gaming not only provides me with a way to unwind but also inspires me to think creatively and stay sharp. With each project I work on, I aim to grow, learn, and deliver solutions that are both innovative and impactful.</p>
           </div>
           
           <div className='space-y-4'>
