@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5 #1e293b;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4f46e5;
+  border-radius: 9999px;
+}
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -15,7 +35,8 @@ html {
 
 body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .gsap_animation { 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 export default {
@@ -28,13 +29,12 @@ export default {
         variatif: "#171717",
         variatif_secondary : "#161616",
       },
-      fontFamily: {
-
-      },
       animation: {
         "bounce-high": "bounceHigh 1s infinite", // Animasi custom
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar")
+  ],
 } satisfies Config;

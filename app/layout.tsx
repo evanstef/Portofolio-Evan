@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.className} w-full text-white`}>
+    <html lang="en" className="scrollbar scrollbar-track-primary scrollbar-thumb-secondary">
+      <body className={`${geistSans.className} w-full text-white`}>                                        
         <NavProvider>
           <LoadingScreenFirstOpen />
           <Navbar />
           {children}
-        </NavProvider>
+        </NavProvider>                                  
       </body>
     </html>
   );
