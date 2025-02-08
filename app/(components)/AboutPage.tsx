@@ -93,7 +93,7 @@ const AboutPage = () => {
           </div>
 
           <div className='desc-about text-[10px] sm:text-sm xl:text-base font-extralight'>
-          <p>I enjoy showcasing my skills in a more visual and engaging way. My journey in web development has allowed me to create responsive and modern designs that prioritize both creativity and user experience.On the back-end, I specialize in JavaScript and PHP, working with frameworks like ExpressJS, NestJS, NodeJS, and Laravel. My focus is on building scalable, efficient, and secure applications.Beyond coding, I love exploring new ideas and playing FPS games to relax and stay sharp. With every project, I strive to learn, grow, and deliver innovative solutions.</p>
+          <p>I enjoy showcasing my skills in a more visual and engaging way. My journey in web development has allowed me to create responsive and modern designs that prioritize both creativity and user experience. I constantly push my limits to craft intuitive and aesthetically pleasing interfaces.On the back-end, I specialize in JavaScript and PHP, working with frameworks like ExpressJS, NestJS, NodeJS, and Laravel. My focus is on building scalable, efficient, and secure applications while continuously improving my expertise in these technologies.Beyond coding, I love exploring new ideas and playing FPS games to relax, stay sharp, and find inspiration. With every project, I strive to learn, grow, and deliver innovative solutions that make an impact.</p>
           </div>
           
           <div className='space-y-4'>
