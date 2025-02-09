@@ -52,50 +52,45 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
     () => ({
       // background: {
       //   color: {
-      //     value: "#0d0d0d",
+      //     value: "#1b1b1b",
       //   },
       // },
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: ["repulse"],
-          },
           onHover: {
             enable: true,
-            mode: 'grab',
-            
-            parallax: {
-              enable: true,
-              force: 70,
-              smooth: 10
-            }
+            mode: ["repulse", "grab"],
           },
         },
         modes: {
-          attract: {
-            distance: 200, // Radius tarikan
-            duration: 0.4, // Durasi efek tarikan
+          bubble: {
+            distance: 100, // Radius gelembung
+            duration: 2, // Durasi efek gelembung
+            opacity: 0.8, // Opacity gelembung
+            size: 15, // Ukuran gelembung
           },
           repulse: {
-            distance: 300, // Radius dorongan
+            distance: 110, // Radius dorongan
             duration: 1, // Durasi efek dorongan
           },
           grab: {
-            distance: 250,
-          },
+            distance: 170, // Radius tarikan
+            lineLinked: {
+              opacity: 0.8, // Opacity garis
+            },
+          }
         },
       },
       particles: {
-        color: {
-          value: ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFFF33"], // Warna variatif
-        },
+        // color: {
+        //   value: ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFFF33"], // Warna variatif
+        // },
         links: {
-          color: ["#FF33A1"],
-          distance: 200,
+          color: ["#f0f0f0"],
+          distance: 240,
           enable: true,
-          opacity: 0.6,
+          opacity: 0.4,
           width: 1.2,
         },
         move: {
@@ -112,7 +107,7 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
           density: {
             enable: true,
           },
-          value: 150,
+          value: 130,
         },
         opacity: {
           value: 1.0,
