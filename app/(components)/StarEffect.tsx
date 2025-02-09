@@ -5,7 +5,7 @@ import { useState } from 'react'
 const StarEffect = () => { 
    // State untuk posisi awal bintang
    const [stars, setStars] = useState(
-    Array.from({ length: 150 }).map(() => ({
+    Array.from({ length: 100 }).map(() => ({
       top: Math.random() * 100,
       left: Math.random() * 100,
     }))
@@ -29,7 +29,7 @@ const StarEffect = () => {
   return (
     <div className="starfield">
     {stars.map((star, index) => {
-      const size = Math.random() * 5 + 1; // Ukuran acak
+      const size = Math.random() * 4 + 1; // Ukuran acak
       const delay = Math.random() * 1; // Delay acak
       return (
         <div
