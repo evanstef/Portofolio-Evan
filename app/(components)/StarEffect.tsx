@@ -5,7 +5,7 @@ import { useState } from 'react'
 const StarEffect = () => { 
    // State untuk posisi awal bintang
    const [stars, setStars] = useState(
-    Array.from({ length: 100 }).map(() => ({
+    Array.from({ length: 120 }).map(() => ({
       top: Math.random() * 100,
       left: Math.random() * 100,
     }))

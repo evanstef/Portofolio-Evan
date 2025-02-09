@@ -97,7 +97,7 @@ const HomePage = () => {
 
               {/* Foto */}
               <div className='w-full md:w-1/2 gambar-evan'>
-                <Image className='w-full h-full' src={foto} alt="Foto Evan" />
+                <Image src={foto} alt="Foto Evan" />
               </div>
 
             </div>
