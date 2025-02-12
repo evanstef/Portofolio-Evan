@@ -116,17 +116,39 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
           type: "image",
           options: {
             image : [
-              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" },
-              { src: "https://cdn.iconscout.com/icon/free/png-256/free-typescript-3521774-2945272.png?f=webp" },
-              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png"},
-              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"},
-              { src: "https://upload.wikimedia.org/wikipedia/id/a/a9/MySQL.png" },
-              { src: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"},
-              { src: "https://miro.medium.com/v2/resize:fit:1200/1*WA_9JsyqFkge2HwYKcdJQw.png"},
-              { src: "https://img.icons8.com/fluent-systems-filled/512/FFFFFF/nextjs.png" },
-              { src: "https://blogs.powercode.id/wp-content/uploads/2022/06/java-logo-vector.png" },
-              { src: "https://static-00.iconduck.com/assets.00/nestjs-icon-2048x2040-3rrvcej8.png" },
-              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" }
+              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
+                opacity: 0.7
+              },
+              { src: "https://cdn.iconscout.com/icon/free/png-256/free-typescript-3521774-2945272.png?f=webp",
+                opacity: 0.7
+               },
+              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png",
+                opacity: 0.7
+              },
+              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                opacity: 0.5
+              },
+              { src: "https://upload.wikimedia.org/wikipedia/id/a/a9/MySQL.png",
+                opacity: 0.5
+              },
+              { src: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png",
+                opacity: 0.5
+              },
+              { src: "https://miro.medium.com/v2/resize:fit:1200/1*WA_9JsyqFkge2HwYKcdJQw.png",
+                opacity: 0.5
+              },
+              { src: "https://img.icons8.com/fluent-systems-filled/512/FFFFFF/nextjs.png",
+                opacity: 0.5
+              },
+              { src: "https://blogs.powercode.id/wp-content/uploads/2022/06/java-logo-vector.png",
+                opacity: 0.5
+              },
+              { src: "https://static-00.iconduck.com/assets.00/nestjs-icon-2048x2040-3rrvcej8.png",
+                opacity: 0.5
+              },
+              { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
+                opacity: 0.5
+              }
             ]
           } 
         },

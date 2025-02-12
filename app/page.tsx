@@ -139,20 +139,7 @@ export default function Home() {
             end: "bottom top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
             scrub: true
           },
-          x : -300,
-          filter: "blur(7px)",
-          ease: "power2.out",
-        })
-
-        // gambar evan
-        gsap.to(".gambar-evan", {
-          scrollTrigger: {
-            trigger: ".about-page",
-            start: "top bottom", // Mulai animasi saat bagian bawah elemen mencapai bagian bawah viewport
-            end: "bottom top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
-            scrub: true
-          },
-          x : 250,
+          x : 300,
           filter: "blur(7px)",
           ease: "power2.out",
         })
@@ -165,7 +152,7 @@ export default function Home() {
             end: "bottom top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
             scrub: true
           },
-          x : -400,
+          x : 400,
           filter: "blur(7px)",
           ease: "power2.out",
         })
@@ -178,7 +165,7 @@ export default function Home() {
             end: "bottom top", // Selesai animasi saat bagian bawah elemen mencapai bagian atas viewport
             scrub: true
           },
-          x : -500,
+          x : 500,
           filter: "blur(7px)",
           ease: "power2.out",
           })

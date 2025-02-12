@@ -2,9 +2,7 @@
 "use client"
 
 import React, { useRef } from 'react'
-import Container from './Container'
-import foto from '../assets/foto_evan.png'
-import Image from 'next/image'
+import Container from './Container';
 import Typewriter from 'typewriter-effect';
 import {gsap} from 'gsap';
 import {useGSAP} from '@gsap/react'
@@ -17,11 +15,10 @@ const HomePage = () => {
 
   useGSAP(() => { 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".gambar-evan", {  opacity : 0, duration : 1, delay : 7 })
 
     const tl = gsap.timeline()
     // animasi pada tulisan dan foto
-    tl.from(".nama-evan", { opacity : 0, duration : 2, delay : 8 })
+    tl.from(".nama-evan", { opacity : 0, duration : 2, delay : 7 })
       .from(".crafting", { scale : 0, duration : 0.2 })
       .from(".text1 p", { scale : 0, duration : 0.1, stagger : 0.1 })
       .from(".text2 p", { scale : 0, duration : 0.1, stagger : 0.1 })
@@ -37,10 +34,10 @@ const HomePage = () => {
         <ParticlesComponent isActive={true} className="absolute top-0 left-0 w-full h-full z-10" />
         <Container>
             {/* Keterangan dan foto */}
-            <div ref={containerHome} className='flex flex-col md:flex-row justify-between items-center w-full h-full'>
+            <div ref={containerHome} className='flex  justify-center items-center w-full h-full'>
               
               {/* Keterangan */}
-              <div className='w-full md:w-1/2 font-bold text-xl sm:text-2xl xl:text-4xl text-center mt-16 lg:mt-0'>
+              <div className='w-full font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mt-16 lg:mt-0'>
                 <h1 className='mb-20 sm:mb-10 md:mb-24 nama-evan'>Hi, I&apos;m Evan Stefanus Candra</h1>
                 <p className='text-xl crafting'>Crafting, Design As</p>
                 <div className='flex gap-5 justify-center front-end'>
@@ -93,11 +90,6 @@ const HomePage = () => {
                   
                 </div>
                 
-              </div>
-
-              {/* Foto */}
-              <div className='w-full md:w-1/2 gambar-evan'>
-                <Image src={foto} alt="Foto Evan" />
               </div>
 
             </div>
