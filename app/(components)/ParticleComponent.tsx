@@ -77,7 +77,7 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
           grab: {
             distance: 170, // Radius tarikan
             lineLinked: {
-              opacity: 0.8, // Opacity garis
+              opacity: 1, // Opacity garis
             },
           }
         },
@@ -91,7 +91,7 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
           distance: 240,
           enable: true,
           opacity: 0.4,
-          width: 1.2,
+          width: 1.1,
         },
         move: {
           direction: "none",
@@ -107,7 +107,7 @@ const ParticlesComponent = ({className, isActive = false, maxClicks = 10 }: {cla
           density: {
             enable: true,
           },
-          value: 130,
+          value: 100,
         },
         opacity: {
           value: 1.0,
